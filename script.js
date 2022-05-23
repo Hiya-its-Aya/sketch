@@ -12,17 +12,14 @@ function takeInput(){
 
 let num = takeInput();
 
-// container.setAttribute('style', `grid-template-columns: repeat(${num}, 2fr); grid-template-rows: repeat(${num}, 2fr);`);
-
-
 //make grid
 for(let i=0; i < (num*num); i++){
     const grid = document.createElement('div')
     grid.classList.add("grid");
     container.appendChild(grid);
     let percent = 600/num;
-    grid.style.width = percent-1 + "px";
-    grid.style.height = percent-1 + "px";
+    grid.style.width = percent-2 + "px";
+    grid.style.height = percent-2 + "px";
 }
 
 const countAll = document.querySelectorAll('.grid').length;
