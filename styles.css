@@ -1,0 +1,27 @@
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Courier New', Courier, monospace, sans-serif;
+}
+
+#container{
+    width: 600px;
+    height: 600px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: blueviolet;
+    border-radius: 10px;
+}
+
+.grid{
+    /* width: 5%;
+    height: 5%; */
+    background-color: white;
+    border:.5px solid grey;
+}
