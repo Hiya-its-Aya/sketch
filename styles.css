@@ -1,5 +1,5 @@
 
-*{ border: 1px dashed red}
+/* *{ border: 1px dashed red} */
 body{
     display: flex;
     flex-direction: column;
@@ -7,26 +7,28 @@ body{
     align-items: center;
     font-family: 'Courier New', Courier, monospace, sans-serif;
     justify-content: space-between;
-    width: 100%;
+    width: 100vw;
+    height: auto;
 }
 
 #container{
     min-width: 550px;
-    width: 550px;
-    height: 550px;
-    display: flex;
+    width: 575px;
+    height: 575px;
+    display: inline-grid;
     padding: 20px ;
     border-radius: 10px;
-    flex-flow: wrap;
     background-color: lightblue;
-
+    grid-template-columns: repeat(16. 2fr);
+    grid-template-rows: repeat(16. 2fr)
 }
 
 .grid{
-    display: flex;
+    
     background-color: white;
-    border: .5px solid grey;
-    margin: 0%
+    border: 1px solid grey;
+    margin: 0%;
+    
 }
 
 button{

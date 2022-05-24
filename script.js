@@ -1,13 +1,14 @@
 const container = document.querySelector("#container");
 const grid = document.createElement('div')
-const gridChoice = document.querySelector(".grid-choice")
 
+const gridChoice= document.querySelector("#grid-choice")
 
+gridChoice.addEventListener('click', getGrid); 
 
 
 function takeInput(){
     let userNum = prompt("Pick a number between 1 and 100.");
-    while(userNum < 0 || userNum > 100){
+    while(userNum <= 0 || userNum > 100){
       userNum = prompt("Pick a number between 1 and 100.")
     }
         console.log(userNum);
@@ -15,38 +16,30 @@ function takeInput(){
 }
 
 
-
-let num = takeInput();
-
-
 //make grid
 function getGrid(){
-    let width = document.getElementById("container").clientWidth - 40; // 40 = padding in CSS
+    // reset();
+    //make a reset function
+    let num = takeInput();
+    container.setAttribute('style', `grid-template-columns: repeat(${num}, 2fr); grid-template-rows: repeat(${num}, 2fr);`);
     for(let i=0; i < (num*num); i++){
         const grid = document.createElement('div')
         grid.classList.add("grid");
         container.appendChild(grid);
-        let percent = (width/num);
-        grid.style.width = percent -1  + "px";
-        grid.style.height = percent -1 + "px";
     }
-}
-
-
-
-const countAll = document.querySelectorAll('.grid').length;
-console.log(countAll);
-
-getGrid()
-
-// gridChoice.addEventListener('click', getGrid()); 
-
-//make hover action
-let box = container.children
-for(let i=0; i < (num*num); i++){
+    let box = container.children
+    for(let i=0; i < (num*num); i++){
     box[i].addEventListener("mouseover", function(event) {
         event.target.style.backgroundColor = "black";
     });
 }
+}
 
-// gridChoice.addEventListener('click', takeInput); 
+
+//reset function (use for erase & before start of getGrid)
+// function reset(){
+//     let num = takeInput()
+//     for(i= 0; i <(num*num); i++)
+//     con
+// }
+
