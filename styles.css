@@ -13,14 +13,16 @@ body{
 
 #container{
     min-width: 550px;
-    width: 575px;
-    height: 575px;
+    width: 600px;
+    height: 600px;
     display: inline-grid;
     padding: 20px ;
     border-radius: 10px;
     background-color: lightblue;
     grid-template-columns: repeat(16. 2fr);
-    grid-template-rows: repeat(16. 2fr)
+    grid-template-rows: repeat(16. 2fr);
+    border-right: 5px solid rgb(57, 138, 165);
+    border-top: 5px solid rgb(57, 138, 165);
 }
 
 .grid{
@@ -28,7 +30,6 @@ body{
     background-color: white;
     border: 1px solid grey;
     margin: 0%;
-    
 }
 
 button{
@@ -36,8 +37,11 @@ button{
     background-color: lightblue;
     color: darkslategrey;
     border-radius: 3px;
+    border: 2px solid rgb(57, 138, 165);
+    font-weight: 700;
 }
 
 #buttons{
     padding-bottom: 10px;
+    
 }
