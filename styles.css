@@ -1,26 +1,41 @@
 
+*{ border: 1px dashed red}
 body{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     font-family: 'Courier New', Courier, monospace, sans-serif;
+    justify-content: space-between;
+    width: 100%;
 }
 
 #container{
-    width: 600px;
-    height: 600px;
+    min-width: 550px;
+    width: 550px;
+    height: 550px;
     display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-    background-color: blueviolet;
+    padding: 20px ;
     border-radius: 10px;
+    flex-flow: wrap;
+    background-color: lightblue;
+
 }
 
 .grid{
     display: flex;
     background-color: white;
-    border:.5px solid grey;
+    border: .5px solid grey;
+    margin: 0%
+}
+
+button{
+    width: 100px;
+    background-color: lightblue;
+    color: darkslategrey;
+    border-radius: 3px;
+}
+
+#buttons{
+    padding-bottom: 10px;
 }
